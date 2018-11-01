@@ -43,8 +43,13 @@ class Student
     new_student.save
   end
 
-  def self.new_from_db
-
+  def self.new_from_db(row)
+    binding.pry
+    sql = <<-SQL
+    SELECT * FROM students
+    SQL
+    
+    
 
   end
 
