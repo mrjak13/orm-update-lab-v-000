@@ -51,7 +51,7 @@ class Student
       sql = "SELECT * FROM students WHERE name = ?"
 
       result = DB[:conn].execute(sql, name)[0]
-      binding.pry
+      Student.new_from_db(result)
     end
 
   def update
